@@ -179,8 +179,10 @@ function inicia_jogo(){
             movimenta['destino']['y'] = y;  //recebe y do destino(segundo clique)
 
             if(peca[x][y]['peca']){  //se tiver alguma peca nessa posição
-              if(movimenta['selecionada']['peca'] == 'comum'){
+              if(movimenta['selecionada']['peca'] == 'comum'){ //verifica se a peça é comum
+                //verifica se a peça é branca
                 if(movimenta['selecionada']['cor'] == 'branco'){
+                  //verifica se está indo para a esquerda ou direita
                   if(movimenta['selecionada']['y'] - movimenta['destino']['y'] < 0) {
                     if(peca[x-1][y+1] !== undefined && peca[x-1][y+1]['peca'] == false && x-1>0 && x-1 <9 && y+1 >0 && y+1 <9){
                       movimenta['destino']['peca'] = peca[x-1][y+1]['peca'];	//destino recebe a peca selecionada
@@ -199,7 +201,7 @@ function inicia_jogo(){
                     } else {
                       auxn = 1;
                     }
-                  } else {
+                  } else { //verifica se está indo para a esquerda ou direita
                     if(peca[x-1][y-1] !== undefined && peca[x-1][y-1]['peca'] == false && x-1>0 && x-1 <9 && y-1 >0 && y-1 <9){
                       movimenta['destino']['peca'] = peca[x-1][y-1]['peca'];	//destino recebe a peca selecionada
                       movimenta['destino']['cor'] = peca[x-1][y-1]['cor'];	//destino recebe a cor selecionada
@@ -218,8 +220,9 @@ function inicia_jogo(){
                       auxn = 1;
                     }
                   }
-                } else {
+                } else { //peça preta
                   if(movimenta['selecionada']['y'] - movimenta['destino']['y'] < 0 && movimenta['selecionada']['x'] - movimenta['destino']['x'] < 1) {
+                    //verifica se está indo para a esquerda ou direita
                     if(peca[x+1][y+1] !== undefined && peca[x+1][y+1]['peca'] == false && x+1>0 && x+1 <9 && y+1 >0 && y+1 <9){
                       movimenta['destino']['peca'] = peca[x+1][y+1]['peca'];	//destino recebe a peca selecionada
                       movimenta['destino']['cor'] = peca[x+1][y+1]['cor'];	//destino recebe a cor selecionada
@@ -237,8 +240,7 @@ function inicia_jogo(){
                     } else {
                       auxn = 1;
                     }
-                  }
-                  else if(movimenta['selecionada']['y'] - movimenta['destino']['y'] > 0 && movimenta['selecionada']['x'] - movimenta['destino']['x'] < 1){
+                  } else { //verifica se está indo para a esquerda ou direita
                     if (peca[x+1][y-1] !== undefined && peca[x+1][y-1]['peca'] == false && x+1>0 && x+1 <9 && y-1 >0 && y-1 <9) {
                       movimenta['destino']['peca'] = peca[x+1][y-1]['peca'];	//destino recebe a peca selecionada
                       movimenta['destino']['cor'] = peca[x+1][y-1]['cor'];	//destino recebe a cor selecionada
@@ -258,7 +260,8 @@ function inicia_jogo(){
                     }
                   }
                 }
-              } else {
+              } else {//peça é dama
+                //verifica se está indo para a esquerda ou direita, para baixo ou pra cima
                 if(movimenta['selecionada']['y'] - movimenta['destino']['y'] < 0 && movimenta['selecionada']['x'] - movimenta['destino']['x'] < 1) {
                   if(peca[x+1][y+1] !== undefined && peca[x+1][y+1]['peca'] == false && x+1>0 && x+1 <9 && y+1 >0 && y+1 <9){
                     movimenta['destino']['peca'] = peca[x+1][y+1]['peca'];	//destino recebe a peca selecionada
@@ -277,7 +280,7 @@ function inicia_jogo(){
                   } else {
                     auxn = 1;
                   }
-                }
+                } //verifica se está indo para a esquerda ou direita, para baixo ou pra cima
                 else if(movimenta['selecionada']['y'] - movimenta['destino']['y'] > 0 && movimenta['selecionada']['x'] - movimenta['destino']['x'] < 1){
                   if (peca[x+1][y-1] !== undefined && peca[x+1][y-1]['peca'] == false && x+1>0 && x+1 <9 && y-1 >0 && y-1 <9) {
                     movimenta['destino']['peca'] = peca[x+1][y-1]['peca'];	//destino recebe a peca selecionada
@@ -295,7 +298,7 @@ function inicia_jogo(){
                   } else {
                     auxn = 1;
                   }
-                }
+                } //verifica se está indo para a esquerda ou direita, para baixo ou pra cima
                 else if(movimenta['selecionada']['y'] - movimenta['destino']['y'] < 0){
                   if (peca[x-1][y+1] !== undefined && peca[x-1][y+1]['peca'] == false && x-1>0 && x-1 <9 && y+1 >0 && y+1 <9) {
                     movimenta['destino']['peca'] = peca[x-1][y+1]['peca'];	//destino recebe a peca selecionada
@@ -313,7 +316,8 @@ function inicia_jogo(){
                   } else {
                     auxn = 1;
                   }
-                } else if(movimenta['selecionada']['y'] - movimenta['destino']['y'] > 0){
+                } //verifica se está indo para a esquerda ou direita, para baixo ou pra cima
+                else if(movimenta['selecionada']['y'] - movimenta['destino']['y'] > 0){
                   if (peca[x-1][y-1] !== undefined && peca[x-1][y-1]['peca'] == false && x-1>0 && x-1 <9 && y-1 >0 && y-1 <9) {
                     movimenta['destino']['peca'] = peca[x-1][y-1]['peca'];	//destino recebe a peca selecionada
                     movimenta['destino']['cor'] = peca[x-1][y-1]['cor'];	//destino recebe a cor selecionada
@@ -344,6 +348,7 @@ function inicia_jogo(){
               }
             }
             
+            //Troca peça para dama
             if(ultima == 1){
               if(movimenta['selecionada']['cor'] == 'branco'){
                 document.getElementById("damas_brancas").innerHTML = parseInt(document.getElementById("damas_brancas").innerText)+1;
@@ -353,6 +358,7 @@ function inicia_jogo(){
               movimenta['selecionada']['peca'] = 'dama';
             }
             
+            //Verifica se feito alterado alguma coisa 
             if(auxn==0){
               document.getElementById("t"+movimenta['selecionada']['x']+""+movimenta['selecionada']['y']).innerHTML = ""; //selcionada fica sem imagem
               document.getElementById("t"+auxx+""+auxy).innerHTML = il[movimenta['selecionada']['cor']][movimenta['selecionada']['peca']]; //destino recebe a imagem da peça selecinada
@@ -369,6 +375,7 @@ function inicia_jogo(){
             }
           }
           
+          //Verifica se feito alterado alguma coisa
           if(auxn==0){
             volta_fundo(); //volta a cor de fundo normal
           
