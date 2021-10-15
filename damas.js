@@ -360,34 +360,45 @@ function inicia_jogo(){
             
             //Verifica se feito alterado alguma coisa 
             if(auxn==0){
-              document.getElementById("t"+movimenta['selecionada']['x']+""+movimenta['selecionada']['y']).innerHTML = ""; //selcionada fica sem imagem
-              document.getElementById("t"+auxx+""+auxy).innerHTML = il[movimenta['selecionada']['cor']][movimenta['selecionada']['peca']]; //destino recebe a imagem da peça selecinada
-              peca[auxx][auxy]['peca']=movimenta['selecionada']['peca'];	//posicao destino recebe a peca
-              peca[auxx][auxy]['cor']=movimenta['selecionada']['cor'];		//posicao destino recebe a cor
-                      
-              peca[movimenta['selecionada']['x']][movimenta['selecionada']['y']]['peca'] = false;		//peca selecionada recebe 0
-              peca[movimenta['selecionada']['x']][movimenta['selecionada']['y']]['cor'] = false;		//cor selecionada recebe 0
-                
-              movimenta['selecionada']['x'] =0;	//selecionada x recebe 0 (pra na proxima ver q é o primeiro movimento)
-              movimenta['selecionada']['y'] =0;	//selecionada y recebe 0 (pra na proxima ver q é o primeiro movimento)
-              movimenta['selecionada']['peca']="0";	//selecionada peca recebe 0 (pra na proxima ver q é o primeiro movimento)
-              movimenta['selecionada']['cor']="0";	//selecionada cor recebe 0 (pra na proxima ver q é o primeiro movimento)
+                document.getElementById("t"+movimenta['selecionada']['x']+""+movimenta['selecionada']['y']).innerHTML = ""; //selcionada fica sem imagem
+                document.getElementById("t"+auxx+""+auxy).innerHTML = il[movimenta['selecionada']['cor']][movimenta['selecionada']['peca']]; //destino recebe a imagem da peça selecinada
+                peca[auxx][auxy]['peca']=movimenta['selecionada']['peca'];	//posicao destino recebe a peca
+                peca[auxx][auxy]['cor']=movimenta['selecionada']['cor'];		//posicao destino recebe a cor
+                        
+                peca[movimenta['selecionada']['x']][movimenta['selecionada']['y']]['peca'] = false;		//peca selecionada recebe 0
+                peca[movimenta['selecionada']['x']][movimenta['selecionada']['y']]['cor'] = false;		//cor selecionada recebe 0
+                  
+                movimenta['selecionada']['x'] =0;	//selecionada x recebe 0 (pra na proxima ver q é o primeiro movimento)
+                movimenta['selecionada']['y'] =0;	//selecionada y recebe 0 (pra na proxima ver q é o primeiro movimento)
+                movimenta['selecionada']['peca']="0";	//selecionada peca recebe 0 (pra na proxima ver q é o primeiro movimento)
+                movimenta['selecionada']['cor']="0";	//selecionada cor recebe 0 (pra na proxima ver q é o primeiro movimento)
             }
           }
           
           //Verifica se feito alterado alguma coisa
           if(auxn==0){
             volta_fundo(); //volta a cor de fundo normal
-          
-            if(vez=="branco"){
-              document.getElementById("ultimo_jogador").innerHTML = vez;
-              vez="preto";
-              document.getElementById("jogador_habilitado").innerHTML = vez;
-            }else{
-              document.getElementById("ultimo_jogador").innerHTML = vez;
-              vez="branco";
-              document.getElementById("jogador_habilitado").innerHTML = vez;
-            } //troca a vez
+            
+            //Verifica vencedor
+            verifica_brancas = parseInt(document.getElementById("pecas_brancas_removidas").innerText);
+            verifica_pretas = parseInt(document.getElementById("pecas_brancas_removidas").innerText);
+            if(verifica_brancas === 12){
+              document.getElementById("resultado").innerHTML = 'Vitória Peças Pretas';
+              alert('Vencedor Peças Pretas');
+            } else if(verifica_pretas == 12){
+              document.getElementById("resultado").innerHTML = 'Vitória Peças Brancas';
+              alert('Vencedor Peças Brancas');
+            } else { //troca a vez
+              if(vez=="branco"){
+                document.getElementById("ultimo_jogador").innerHTML = vez;
+                vez="preto";
+                document.getElementById("jogador_habilitado").innerHTML = vez;
+              }else{
+                document.getElementById("ultimo_jogador").innerHTML = vez;
+                vez="branco";
+                document.getElementById("jogador_habilitado").innerHTML = vez;
+              }
+            }
           } 
         }
       }

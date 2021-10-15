@@ -6,77 +6,77 @@
   <body onload="inicia_jogo();">
     <div style="display: flex;">
       <div id="tabuleiro" style="justify-content: flex-start;">
-        <div id="t11" onclick="seleciona(1,1);"></div>	<div id="t12" onclick="seleciona(1,2);">&#9922;</div>
-        <div id="t13" onclick="seleciona(1,3);"></div>	<div id="t14" onclick="seleciona(1,4);">&#9922;</div>
-        <div id="t15" onclick="seleciona(1,5);"></div>	<div id="t16" onclick="seleciona(1,6);">&#9922;</div>
-        <div id="t17" onclick="seleciona(1,7);"></div>	<div id="t18" onclick="seleciona(1,8);">&#9922;</div>
+        <div id="t11"></div>	<div class="div_tabuleiro" id="t12" onclick="seleciona(1,2);">&#9922;</div>
+        <div id="t13"></div>	<div class="div_tabuleiro" id="t14" onclick="seleciona(1,4);">&#9922;</div>
+        <div id="t15"></div>	<div class="div_tabuleiro" id="t16" onclick="seleciona(1,6);">&#9922;</div>
+        <div id="t17"></div>	<div class="div_tabuleiro" id="t18" onclick="seleciona(1,8);">&#9922;</div>
         
-        <div id="t21" onclick="seleciona(2,1);">&#9922;</div>	<div id="t22" onclick="seleciona(2,2);"></div>
-        <div id="t23" onclick="seleciona(2,3);">&#9922;</div>	<div id="t24" onclick="seleciona(2,4);"></div>
-        <div id="t25" onclick="seleciona(2,5);">&#9922;</div>	<div id="t26" onclick="seleciona(2,6);"></div>
-        <div id="t27" onclick="seleciona(2,7);">&#9922;</div>	<div id="t28" onclick="seleciona(2,8);"></div>
+        <div class="div_tabuleiro" id="t21" onclick="seleciona(2,1);">&#9922;</div>	<div id="t22"></div>
+        <div class="div_tabuleiro" id="t23" onclick="seleciona(2,3);">&#9922;</div>	<div id="t24"></div>
+        <div class="div_tabuleiro" id="t25" onclick="seleciona(2,5);">&#9922;</div>	<div id="t26"></div>
+        <div class="div_tabuleiro" id="t27" onclick="seleciona(2,7);">&#9922;</div>	<div id="t28"></div>
         
-        <div id="t31" onclick="seleciona(3,1);"></div>	<div id="t32" onclick="seleciona(3,2);">&#9922;</div>
-        <div id="t33" onclick="seleciona(3,3);"></div>	<div id="t34" onclick="seleciona(3,4);">&#9922;</div>
-        <div id="t35" onclick="seleciona(3,5);"></div>	<div id="t36" onclick="seleciona(3,6);">&#9922;</div>
-        <div id="t37" onclick="seleciona(3,7);"></div>	<div id="t38" onclick="seleciona(3,8);">&#9922;</div>
+        <div id="t31"></div>	<div class="div_tabuleiro" id="t32" onclick="seleciona(3,2);">&#9922;</div>
+        <div id="t33"></div>	<div class="div_tabuleiro" id="t34" onclick="seleciona(3,4);">&#9922;</div>
+        <div id="t35"></div>	<div class="div_tabuleiro" id="t36" onclick="seleciona(3,6);">&#9922;</div>
+        <div id="t37"></div>	<div class="div_tabuleiro" id="t38" onclick="seleciona(3,8);">&#9922;</div>
         
-        <div id="t41" onclick="seleciona(4,1);"></div>	<div id="t42" onclick="seleciona(4,2);"></div>
-        <div id="t43" onclick="seleciona(4,3);"></div>	<div id="t44" onclick="seleciona(4,4);"></div>
-        <div id="t45" onclick="seleciona(4,5);"></div>	<div id="t46" onclick="seleciona(4,6);"></div>
-        <div id="t47" onclick="seleciona(4,7);"></div>	<div id="t48" onclick="seleciona(4,8);"></div>
+        <div class="div_tabuleiro" id="t41" onclick="seleciona(4,1);"></div>	<div id="t42"></div>
+        <div class="div_tabuleiro" id="t43" onclick="seleciona(4,3);"></div>	<div id="t44"></div>
+        <div class="div_tabuleiro" id="t45" onclick="seleciona(4,5);"></div>	<div id="t46"></div>
+        <div class="div_tabuleiro" id="t47" onclick="seleciona(4,7);"></div>	<div id="t48"></div>
         
-        <div id="t51" onclick="seleciona(5,1);"></div>	<div id="t52" onclick="seleciona(5,2);"></div>
-        <div id="t53" onclick="seleciona(5,3);"></div>	<div id="t54" onclick="seleciona(5,4);"></div>
-        <div id="t55" onclick="seleciona(5,5);"></div>	<div id="t56" onclick="seleciona(5,6);"></div>
-        <div id="t57" onclick="seleciona(5,7);"></div>	<div id="t58" onclick="seleciona(5,8);"></div>
+        <div id="t51"></div>	<div class="div_tabuleiro" id="t52" onclick="seleciona(5,2);"></div>
+        <div id="t53"></div>	<div class="div_tabuleiro" id="t54" onclick="seleciona(5,4);"></div>
+        <div id="t55"></div>	<div class="div_tabuleiro" id="t56" onclick="seleciona(5,6);"></div>
+        <div id="t57"></div>	<div class="div_tabuleiro" id="t58" onclick="seleciona(5,8);"></div>
         
-        <div id="t61" onclick="seleciona(6,1);">&#9920;</div>	<div id="t62" onclick="seleciona(6,2);"></div>
-        <div id="t63" onclick="seleciona(6,3);">&#9920;</div>	<div id="t64" onclick="seleciona(6,4);"></div>
-        <div id="t65" onclick="seleciona(6,5);">&#9920;</div>	<div id="t66" onclick="seleciona(6,6);"></div>
-        <div id="t67" onclick="seleciona(6,7);">&#9920;</div>	<div id="t68" onclick="seleciona(6,8);"></div>
+        <div class="div_tabuleiro" id="t61" onclick="seleciona(6,1);">&#9920;</div>	<div></div>
+        <div class="div_tabuleiro" id="t63" onclick="seleciona(6,3);">&#9920;</div>	<div></div>
+        <div class="div_tabuleiro" id="t65" onclick="seleciona(6,5);">&#9920;</div>	<div></div>
+        <div class="div_tabuleiro" id="t67" onclick="seleciona(6,7);">&#9920;</div>	<div ></div>
         
-        <div id="t71" onclick="seleciona(7,1);"></div>	<div id="t72" onclick="seleciona(7,2);">&#9920;</div>
-        <div id="t73" onclick="seleciona(7,3);"></div>	<div id="t74" onclick="seleciona(7,4);">&#9920;</div>
-        <div id="t75" onclick="seleciona(7,5);"></div>	<div id="t76" onclick="seleciona(7,6);">&#9920;</div>
-        <div id="t77" onclick="seleciona(7,7);"></div>	<div id="t78" onclick="seleciona(7,8);">&#9920;</div>
+        <div id="t71"></div>	<div class="div_tabuleiro" id="t72" onclick="seleciona(7,2);">&#9920;</div>
+        <div id="t73"></div>	<div class="div_tabuleiro" id="t74" onclick="seleciona(7,4);">&#9920;</div>
+        <div id="t75"></div>	<div class="div_tabuleiro" id="t76" onclick="seleciona(7,6);">&#9920;</div>
+        <div id="t77"></div>	<div class="div_tabuleiro" id="t78" onclick="seleciona(7,8);">&#9920;</div>
         
-        <div id="t81" onclick="seleciona(8,1);">&#9920;</div>	<div id="t82" onclick="seleciona(8,2);"></div>
-        <div id="t83" onclick="seleciona(8,3);">&#9920;</div>	<div id="t84" onclick="seleciona(8,4);"></div>
-        <div id="t85" onclick="seleciona(8,5);">&#9920;</div>	<div id="t86" onclick="seleciona(8,6);"></div>
-        <div id="t87" onclick="seleciona(8,7);">&#9920;</div>	<div id="t88" onclick="seleciona(8,8);"></div>
+        <div class="div_tabuleiro" id="t81" onclick="seleciona(8,1);">&#9920;</div>	<div id="t82"></div>
+        <div class="div_tabuleiro" id="t83" onclick="seleciona(8,3);">&#9920;</div>	<div id="t84"></div>
+        <div class="div_tabuleiro" id="t85" onclick="seleciona(8,5);">&#9920;</div>	<div id="t86"></div>
+        <div class="div_tabuleiro" id="t87" onclick="seleciona(8,7);">&#9920;</div>	<div id="t88"></div>
       
       </div>
       <div style="justify-content: flex-end;">
         <h2>Árbitro</h2>
         <div style="display: flex;">
-          <h3>Peças brancas removidas: </h3>
-          <h3 id="pecas_brancas_removidas">0</h3>
+          <h3 class="title">Peças brancas removidas: </h3>
+          <h3 class="subtitle" id="pecas_brancas_removidas">0</h3>
         </div>
         <div style="display: flex;">
-          <h3>Peças pretas removidas: </h3>
-          <h3 id="pecas_pretas_removidas">0</h3>
+          <h3 class="title">Peças pretas removidas: </h3>
+          <h3 class="subtitle" id="pecas_pretas_removidas">0</h3>
         </div>
         <div style="display: flex;">
-          <h3>Damas brancas: </h3>
-          <h3 id="damas_brancas">0</h3>
+          <h3 class="title">Damas brancas: </h3>
+          <h3 class="subtitle" id="damas_brancas">0</h3>
         </div>
         <div style="display: flex;">
-          <h3>Damas pretas: </h3>
-          <h3 id="damas_pretas">0</h3>
+          <h3 class="title">Damas pretas: </h3>
+          <h3 class="subtitle" id="damas_pretas">0</h3>
         </div>
         <div style="display: flex;">
-          <h3>Jogador habilitado a jogar: </h3>
-          <h3 id="jogador_habilitado"></h3>
+          <h3 class="title">Jogador habilitado a jogar: </h3>
+          <h3 class="subtitle" id="jogador_habilitado"></h3>
         </div>
         <h3>Total de peças a serem removidas para ganhar o jogo: 12</h3>
         <div style="display: flex;">
-          <h3>Último jogador a jogar: </h3>
-          <h3 id="ultimo_jogador"></h3>
+          <h3 class="title">Último jogador a jogar: </h3>
+          <h3 class="subtitle" id="ultimo_jogador">Nenhum</h3>
         </div>
         <div style="display: flex;">
-          <h3>Vencedor: </h3>
-          <h3 id="vencedor"></h3>
+          <h3 class="title">Vencedor: </h3>
+          <h3 class="subtitle" id="resultado">Em Aberto</h3>
         </div>
       </div>
     </div>
