@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /* TABULEIRO*/
-#tabuleiro{width: 577px; height: 577px; border:#000 solid 1px; margin-left: 100px; margin-right: 100px;}
+#tabuleiro{width: 577px; height: 577px; margin-left: 100px; margin-right: 100px;}
 
 #tabuleiro div{width:70px; height:70px; float:left; margin:1px; font-size: 48px; text-align:center;}
 
@@ -10,13 +10,26 @@
 
 #t12, #t14, #t16, #t18, #t21, #t23, #t25, #t27, #t32, #t34, #t36, #t38, #t41, #t43, #t45, #t47, #t52, #t54, #t56, #t58, #t61, #t63, #t65, #t67, #t72, #t74, #t76, #t78, #t81, #t83, #t85, #t87{background-color:#726d6d;} 
 
+.div_arbitro {
+  height: 40px;
+  display: flex;
+}
+
+.div_button {
+  display: flex;
+  margin-top: 15px;
+}
+
+.div_button button{
+  margin-right: 10px;
+  height: 30px;
+}
+
 .title { margin-right: 10px; }
 
-.subtitle{ text-transform: uppercase; }
-
-.div_tabuleiro{ cursor:pointer;}
+.subtitle{ 
+  text-transform: uppercase;
+  font-weight: bold; 
+}
 
 #fundo{background:#000; position:fixed; width:100%; height:100%; z-index:999; top:0; left:0; opacity:0.50;-moz-opacity: 0.50;filter: alpha(opacity=50);}
-.escolhe{position:fixed;top:20%;left:40%;display:none;z-index:1000;background:#FFF;border:#000 solid 1px;}
-.escolhe div{width:70px; height:70px; float:left; margin:1px; font-size: 48px; text-align:center; float:left; margin:5px;}
-#escolhecor-inicio{ display:block; left:45%;}
